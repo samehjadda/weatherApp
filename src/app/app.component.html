@@ -1,6 +1,8 @@
-<!-- <div class="search" (submit)="onSubmit()">
-  <form #form="ngForm"></form>
-</div> -->
+<div class="search" (submit)="onSubmit()">
+  <form #form="ngForm">
+    <input type="text" placeholder="Search" name="city" [(ngModel)]="cityName">
+  </form>
+</div>
 <div class="container" *ngIf="weatherData">
   <div class="upper-data">
       <img src="../assets/hot.jpeg" *ngIf="weatherData.current.temp_c > 15">
@@ -17,8 +19,7 @@
       <div class="more-info-container">
         <div class="info-block">
           <div class="info-block-label">
-            <img src="../assets/low.png" alt="">
-            <span>UV</span>
+            <img src="../assets/uv.png" alt="">
           </div>
           <div class="info-block-value">
             {{weatherData.current.uv}}
@@ -28,11 +29,10 @@
       <div class="more-info-container">
         <div class="info-block">
           <div class="info-block-label">
-            <img src="../assets/high.png" alt="">
-            <span>Condotion</span>
+            <img [src]="weatherData.current.condition.icon" alt="">
           </div>
           <div class="info-block-value">
-            {{weatherData.current.condition}}
+            {{weatherData.current.condition.text}}
           </div>
         </div>
       </div>
@@ -40,7 +40,6 @@
         <div class="info-block">
           <div class="info-block-label">
             <img src="../assets/humidity.png" alt="">
-            <span>Humidity</span>
           </div>
           <div class="info-block-value">
             {{weatherData.current.humidity}}%
@@ -51,10 +50,9 @@
         <div class="info-block">
           <div class="info-block-label">
             <img src="../assets/wind.png" alt="">
-            <span>Wind</span>
           </div>
           <div class="info-block-value">
-            {{weatherData.current.wind_kph}}KM/H
+            {{weatherData.current.wind_kph}} KM/H
           </div>
         </div>
       </div>
