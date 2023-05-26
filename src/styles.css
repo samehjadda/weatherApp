@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
 :root {
   --blue-1: #dde6ed;
-  --blue-2: rgb(91, 143, 189);
+  --blue-2: #19C3FB;
   --yellow: #fac742;
   --grey: #ededed;
   --shadow-dark: rgba(0, 0, 0, 0.3);
-  --shadow-ligh: rgba(211, 213, 219, 0.185);
+  --shadow-ligh: #e3f4fe73;
 }
 
 * {
@@ -28,8 +28,9 @@ body {
 .container {
   width: 400px;
   height: 80vh;
-  background-color: var(--blue-2);
-  border-radius: 10px;
+  background: rgb(2,0,36);
+background: linear-gradient(146deg, rgba(2,0,36,1) 10%, rgba(33,33,154,1) 42%, rgba(0,212,255,1) 100%);
+  
   box-shadow: 10px 10px 10px 10px var(--shadow-dark);
 }
 
@@ -38,8 +39,6 @@ body {
   overflow: hidden;
   width: 100%;
   height: 40%;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
 }
 
 .upper-data img {
@@ -55,8 +54,6 @@ body {
   overflow: hidden;
   width: 100%;
   height: 60%;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 1em;
   display: flex;
   flex-direction: column;
@@ -92,18 +89,16 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin-top: 15px;
+  margin-top: 23px;
 }
 .more-info-container {
   background-color: var(--shadow-ligh);
-  padding-top: 10px;
   padding-left: 2px;
-  margin-top: 15px;
   display: flex;
   border-radius: 5px;
   flex-direction: column;
   width: 42%;
-  height: 90%;
+  height: 100%;
 }
 
 .info-block {
@@ -131,7 +126,7 @@ body {
 }
 
 .search {
-  margin: 20px;
+  margin: 10px;
   text-align: center;
   color: white;
   font-size: 22px;
@@ -149,8 +144,8 @@ body {
   border: none;
   border-radius: 5px;
   font-size: 1.2em;
-  width: 80%;
-  padding: 23px;
+  width: 60%;
+  padding: 20px;
   text-align: center;
   color: white;
 }
