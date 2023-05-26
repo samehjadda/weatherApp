@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   constructor(private weatherService: WeatherService){
 
   }
-  cityName: string = 'Mississauga';
+  cityName: string = 'Toronto';
   weatherData?: WeatherData;
 
   ngOnInit(): void {
