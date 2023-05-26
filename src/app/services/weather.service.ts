@@ -12,10 +12,11 @@ export class WeatherService {
   constructor(private http: HttpClient) { }
 
   getWeatherData(cityName: string): Observable<WeatherData> {
-    let params = new HttpParams()
-    .set('q', cityName)
-    .set('key', environment.api_key);
-
-    return this.http.get<WeatherData>(`${environment.weatherApiBaseUrl}/current.json`, {params: params});
+    const api_key = '8e60f918b8c44268982204033232505';
+    const weatherApiBaseUrl = 'http://api.weatherapi.com/v1';
+    const url = `${weatherApiBaseUrl}/current.json?key=${api_key}&q=${cityName}`;
+    
+    return this.http.get<WeatherData>(url);
   }
+  
 }
