@@ -1,27 +1,27 @@
-# Weather
+# Angular Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+This is a simple weather application built with Angular. It fetches weather data from the WeatherAPI using an Angular service. The user can search for the weather of any city.
 
-## Development server
+## Project Structure
+
+The project mainly consists of a Weather service (weather.service.ts) and an app component (app.component.ts).
+
+The WeatherService uses Angular's HttpClient to make HTTP requests to the WeatherAPI. It has a single method getWeatherData(cityName: string) that takes in a city name and fetches the weather data for that city.
+The AppComponent is the root component of the application. It uses the WeatherService to get the weather data and displays it in the view (app.component.html).
+
+## Usage
+
+To use the application, simply type in the name of the city in the search bar and press enter. The application will then display the current weather data for that city, including:
+
+* Current temperature
+* Daytime or nighttime visual representation
+* UV index
+* Current weather condition icon and description
+* Current humidity
+* Current wind speed
+
+
+### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
